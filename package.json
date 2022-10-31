@@ -18,6 +18,7 @@
   "dependencies": {
     "@expo/browser-polyfill": "^1.0.0",
     "@types/pixi.js": "4.8.9",
+    "expo-gl-cpp": "^11.4.0",
     "path": "^0.12.7",
     "pixi-filters": "2.7.1",
     "pixi.js": "latest-4.x",
@@ -29,7 +30,7 @@
     "@typescript-eslint/parser": "^5.26.0",
     "eslint": "^8.16.0",
     "expo-asset": "^8.5.0",
-    "expo-gl": "^11.3.0",
+    "expo-gl": "11.4.0",
     "expo-module-scripts": "^2.0.0",
     "prettier": "^2.6.2"
   },
