@@ -1,9 +1,9 @@
 import "@expo/browser-polyfill";
 import { Asset } from "expo-asset";
+import { BatchRenderer } from "pixi-batch-renderer";
 import * as filters from "pixi-filters";
 import * as PIXIInstance from "pixi.js";
 import { PixelRatio } from "react-native";
-import { BatchRenderer } from "pixi-batch-renderer";
 // Override PIXI.Application to accept expo-gl context:
 // https://pixijs.download/v4.8.9/docs/PIXI.Application.html
 class PIXIApplication extends PIXIInstance.Application {
