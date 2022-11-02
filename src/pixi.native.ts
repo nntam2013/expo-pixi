@@ -135,7 +135,8 @@ async function spriteFromAssetAsync(resource: string | number) {
   const texture = await textureFromAssetAsync(resource);
   return PIXISprite.from(texture as any);
 }
-
+// @ts-ignore
+PIXIInstance.WebGLRenderer.registerPlugin("batch", BatchRenderer);
 export const PIXI = {
   ...PIXIInstance,
   filters: {

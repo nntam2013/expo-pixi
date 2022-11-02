@@ -7410,6 +7410,11 @@ pixelmatch@^4.0.2:
   dependencies:
     pngjs "^3.0.0"
 
+pixi-batch-renderer@^2.5.3:
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/pixi-batch-renderer/-/pixi-batch-renderer-2.5.3.tgz#4cb03d8500ae3bc592c4abe2132b98f7a3403532"
+  integrity sha512-YI1FQZMjFAmQxqnc1FGNowyuQ5JQidO15By1Vz1xzrnBDCvFhIDiav5phPCZ8Bdza+j1rVWmzPn/3nxd6SV1PA==
+
 pixi-filters@2.7.1:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/pixi-filters/-/pixi-filters-2.7.1.tgz#7b7400b913b0ede213278e10b2af52c0e4db2965"
