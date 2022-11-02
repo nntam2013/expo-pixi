@@ -19,7 +19,7 @@
     "@expo/browser-polyfill": "^1.0.0",
     "@types/pixi.js": "4.8.9",
     "path": "^0.12.7",
-    "pixi-batch-renderer": "^2.5.3",
+    "pixi-batch-renderer": "2.4.0",
     "pixi-filters": "2.7.1",
     "pixi.js": "latest-4.x",
     "url": "^0.11.0"
