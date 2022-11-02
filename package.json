@@ -1,6 +1,6 @@
 {
   "name": "expo-pixi",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Pixi.js V4 Expo",
   "main": "build/index.js",
   "types": "build/index.d.ts",
