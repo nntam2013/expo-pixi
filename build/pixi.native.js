@@ -23,6 +23,7 @@ class PIXIApplication extends PIXIInstance.Application {
         const targetWidth = width ?? context.drawingBufferWidth / targetResolution;
         const targetHeight = height ?? context.drawingBufferHeight / targetResolution;
         super({
+            // @ts-ignore
             context,
             resolution: targetResolution,
             width: targetWidth,
@@ -38,6 +39,7 @@ class PIXISprite extends PIXIInstance.Sprite {
             // @ts-ignore https://github.com/expo/browser-polyfill/blob/master/src/DOM/HTMLImageElement.js#L62=L73
             const image = new global.HTMLImageElement(asset);
             image.onerror = (e) => console.log(`Asset errored ${asset.name}`, e);
+            // @ts-ignore
             return PIXIInstance.Sprite.from(image);
         }
         else if (isPath(asset)) {

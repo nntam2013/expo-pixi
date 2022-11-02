@@ -9,6 +9,7 @@ class PIXIWebApplication extends PIXIInstance.Application {
         }
         const targetResolution = resolution ?? PixelRatio.get();
         super({
+            // @ts-ignore
             context,
             resolution: targetResolution,
             ...options,

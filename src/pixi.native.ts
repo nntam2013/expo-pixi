@@ -6,20 +6,14 @@ import * as filters from "pixi-filters";
 import * as PIXIInstance from "pixi.js";
 import { PixelRatio } from "react-native";
 
-interface ApplicationOptions extends PIXIInstance.ApplicationOptions {
+interface ApplicationOptions {
   context: ExpoWebGLRenderingContext;
 }
 
 // Override PIXI.Application to accept expo-gl context:
 // https://pixijs.download/v4.8.9/docs/PIXI.Application.html
 class PIXIApplication extends PIXIInstance.Application {
-  constructor({
-    context,
-    width,
-    height,
-    resolution,
-    ...props
-  }: ApplicationOptions) {
+  constructor({ context, width, height, resolution, ...props }) {
     if (!context) {
       throw new Error("PIXI context must be a valid WebGL context.");
     }
@@ -41,6 +35,7 @@ class PIXIApplication extends PIXIInstance.Application {
       height ?? context.drawingBufferHeight / targetResolution;
 
     super({
+      // @ts-ignore
       context,
       resolution: targetResolution,
       width: targetWidth,
@@ -58,7 +53,7 @@ class PIXISprite extends PIXIInstance.Sprite {
       // @ts-ignore https://github.com/expo/browser-polyfill/blob/master/src/DOM/HTMLImageElement.js#L62=L73
       const image = new global.HTMLImageElement(asset);
       image.onerror = (e) => console.log(`Asset errored ${asset.name}`, e);
-
+      // @ts-ignore
       return PIXIInstance.Sprite.from(image);
     } else if (isPath(asset)) {
       return spriteFromAssetAsync(asset);

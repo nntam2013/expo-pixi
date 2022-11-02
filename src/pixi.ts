@@ -3,13 +3,13 @@ import * as filters from "pixi-filters";
 import * as PIXIInstance from "pixi.js";
 import { PixelRatio } from "react-native";
 
-interface ApplicationOptions extends PIXIInstance.ApplicationOptions {
+interface ApplicationOptions {
   context: ExpoWebGLRenderingContext;
 }
 
 // https://pixijs.download/v4.8.9/docs/PIXI.Application.html
 class PIXIWebApplication extends PIXIInstance.Application {
-  constructor({ context, resolution, ...options }: ApplicationOptions) {
+  constructor({ context, resolution, ...options }) {
     if (!context) {
       throw new Error("PIXI context must be a valid WebGL context.");
     }
@@ -17,6 +17,7 @@ class PIXIWebApplication extends PIXIInstance.Application {
     const targetResolution = resolution ?? PixelRatio.get();
 
     super({
+      // @ts-ignore
       context,
       resolution: targetResolution,
       ...options,
