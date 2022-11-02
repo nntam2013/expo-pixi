@@ -5,6 +5,7 @@ import { ExpoWebGLRenderingContext } from "expo-gl";
 import * as filters from "pixi-filters";
 import * as PIXIInstance from "pixi.js";
 import { PixelRatio } from "react-native";
+import { BatchRenderer } from "pixi-batch-renderer";
 
 interface ApplicationOptions extends PIXIInstance.ApplicationOptions {
   context: ExpoWebGLRenderingContext;
