@@ -1,3 +1,4 @@
+import { BatchRenderer } from "pixi-batch-renderer";
 import * as filters from "pixi-filters";
 import * as PIXIInstance from "pixi.js";
 import { PixelRatio } from "react-native";
@@ -16,6 +17,8 @@ class PIXIWebApplication extends PIXIInstance.Application {
         this.ticker.add(() => context.endFrameEXP());
     }
 }
+// @ts-ignore
+PIXIInstance.WebGLRenderer.registerPlugin("batch", BatchRenderer);
 export const PIXI = {
     ...PIXIInstance,
     filters: {
